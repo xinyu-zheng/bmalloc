@@ -28,7 +28,8 @@ fn build_bdwgc() {
         .pic(true)
         .define("BUILD_SHARED_LIBS", "OFF")
         .define("enable_parallel_mark", "Off")
-        .cflag("-DGC_ALWAYS_MULTITHREADED");
+        .cflag("-DGC_ALWAYS_MULTITHREADED")
+        .cflag("-DTHREAD_LOCAL_ALLOC");
 
     #[cfg(feature = "gc-assertions")]
     build.define("enable_gc_assertions", "ON");
