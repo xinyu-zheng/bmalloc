@@ -1,0 +1,17 @@
+[package]
+name = "bmalloc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+core = { version = "1.0.0", package = 'rustc-std-workspace-core' }
+compiler_builtins = { version = "0.1.10", features = ['rustc-dep-of-std'] }
+libc = { version = "0.2.148", default-features = false, features = ['rustc-dep-of-std'], public = true }
+
+[build-dependencies]
+cmake = "0.1"
+
+[features]
+link-shared = []
+gc-assertions = []
+gc-debug = []
