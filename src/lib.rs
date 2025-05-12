@@ -111,7 +111,7 @@ unsafe impl GlobalAlloc for GcAllocator {
 
     #[inline]
     unsafe fn dealloc(&self, ptr: *mut u8, layout: Layout) {
-        //unsafe { gc_free(ptr, layout) }
+        unsafe { gc_free(ptr, layout) }
     }
 
     #[inline]
