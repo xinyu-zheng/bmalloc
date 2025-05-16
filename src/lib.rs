@@ -158,7 +158,7 @@ unsafe fn gc_realloc(ptr: *mut u8, old_layout: Layout, new_size: usize) -> *mut 
 #[inline]
 unsafe fn gc_free(ptr: *mut u8, _: Layout) {
     unsafe {
-        crate::GC_free(ptr);
+        //crate::GC_free(ptr);
     }
 }
 
